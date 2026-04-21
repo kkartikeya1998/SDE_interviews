@@ -11,7 +11,7 @@
 ## TODO: Design Patterns
 
 ### Behavioural Patterns
-- [ ] Strategy
+- [x] Strategy
 - [ ] Observer
 - [ ] Command
 - [ ] Iterator
