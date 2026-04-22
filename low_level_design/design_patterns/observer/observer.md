@@ -44,6 +44,8 @@
 - Good for event-driven architectures  
 
 ### Cons
+- Breaks single responsibility principle (bussiness logic + publishing)
+  - IObservable can be made an abstract class implementing the observer pattern functions
 - Can lead to unexpected update chains  
 - Harder to debug (implicit flow)  
 - Risk of memory leaks (forgotten unsubscriptions)  
