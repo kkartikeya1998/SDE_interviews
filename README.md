@@ -32,7 +32,7 @@
 
 ### Creational Patterns
 - [ ] Singleton
-- [ ] Factory Method
+- [x] Factory Method (parametrized, not abstract)
 - [ ] Abstract Factory
 - [ ] Builder
 - [ ] Prototype
