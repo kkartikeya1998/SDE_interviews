@@ -1,0 +1,82 @@
+
+# Template Method Pattern (Refined Notes)
+
+## Intent
+- Define the skeleton of an algorithm in a base class
+- Defer specific steps to subclasses
+- Allow subclasses to redefine parts without changing overall structure
+- Pipeline the methods for a bigger task in a fixed order of subtasks 
+
+## Structure
+- AbstractClass
+  - templateMethod() → defines algorithm structure  
+  - primitiveOperations() → abstract steps implemented by subclasses  
+  - hooks() → optional override points  
+- ConcreteClass
+  - implements specific steps of the algorithm  
+
+## When to Use
+- Multiple classes share the same algorithm structure but differ in steps  
+- Want to enforce a fixed sequence of operations  
+- Need to avoid code duplication across similar workflows  
+- Want controlled extension points in an algorithm  
+
+## Core Idea
+- Base class defines **"what to do and in what order"**  
+- Subclasses define **"how each step is done"**  
+
+## What It Solves
+- Eliminates duplicated algorithm structure  
+- Prevents inconsistent implementations of workflows  
+- Centralizes control over execution flow  
+
+## What You Already Have (Sharpened)
+- Inheritance-based reuse of behavior  
+- Fixed workflow with customizable steps  
+- Control inversion:
+  - base class drives execution  
+  - subclasses fill in details  
+
+## Preconditions
+- There exists a common algorithm structure  
+- Variations can be isolated into individual steps  
+- Subclasses are allowed to extend behavior without breaking flow  
+
+## Postconditions
+- Algorithm structure is consistent across implementations  
+- Subclasses customize only specific steps  
+- Changes to workflow happen in one place (base class)  
+
+## Trade-offs
+
+### Pros
+- Promotes code reuse (common logic in base class)  
+- Enforces consistent algorithm structure  
+- Reduces duplication across subclasses  
+- Provides clear extension points (hooks)  
+
+### Cons
+- Relies on inheritance (less flexible than composition)  
+- Changes in base class can impact all subclasses  
+- Can lead to rigid designs if overused  
+- Harder to understand due to control inversion  
+
+## Subtle but Important Insight
+- Shifts from:
+  - "each class defines its own algorithm"  
+  - to "base class defines the algorithm, subclasses customize steps"  
+
+This enables:
+- controlled extensibility  
+- consistency across implementations  
+- reuse of invariant logic  
+
+## Variants
+- Hook Method Pattern → optional steps overridden selectively  
+- Hollywood Principle → "Don't call us, we'll call you"  
+- Template + Factory Method → defer object creation to subclasses  
+
+## Comparisons
+- vs Strategy → composition + runtime selection vs inheritance + fixed structure  
+- vs Factory Method → focuses on object creation vs full algorithm structure  
+- vs Command → encapsulates actions vs defines execution flow  

@@ -18,7 +18,7 @@
 - [ ] State
 - [ ] Chain of Responsibility
 - [ ] Mediator
-- [ ] Template Method
+- [x] Template Method
 - [ ] Visitor
 
 ### Structural Patterns
