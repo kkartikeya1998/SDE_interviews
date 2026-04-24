@@ -35,4 +35,4 @@
 - [x] Factory Method (parametrized, not abstract)
 - [ ] Abstract Factory
 - [ ] Builder
-- [ ] Prototype
+- [x] Prototype
